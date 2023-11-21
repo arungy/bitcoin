@@ -6,7 +6,7 @@ DEBUG = 0
 ENABLE_WARNINGS = 1
 WARNING_AS_ERROR = 0
 
-TARGET = hello_world print_date
+TARGET = sample
 INCLUDE = .
 
 CXX_STANDARD = c++17
@@ -32,11 +32,8 @@ CXX_FLAGS = $(CXX_OPT) -std=$(CXX_STANDARD) $(CXX_WARNINGS) -I $(INCLUDE)
 #TARGETS
 all: $(TARGET)
 
-hello_world: hello_world.o
-	$(CXX) -o $@ $^ $(CXX_FLAGS)
-
-print_date: print_date.o
-	$(CXX) -o $@ $^ $(CXX_FLAGS)
+$(TARGET): main.o 
+	$(CXX) -o $(TARGET) $^ $(CXX_FLAGS)
 
 clean:
 	rm -f $(TARGET) *.o *.out
