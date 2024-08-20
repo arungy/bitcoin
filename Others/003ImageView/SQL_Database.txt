@@ -1,0 +1,30 @@
+SQL Database
+
+#Get data from database
+
+SELECT *
+FROM students    #students is "database-name"
+
+#To get particular item based on database availale items such as "name, age, grade"
+
+SELECT *
+FROM students    #students is "database-name"
+WHERE age = 5
+
+or 
+
+ex 1:
+
+SELECT *
+FROM students      #students is "database-name"
+WHERE grade >= 10   #less than and equal to, greater than and equal to
+AND course = 'JavaScript'    # AND, OR is an operator, which can be used.
+
+ex 2:
+
+SELECT *
+FROM students
+WHERE (age = 12 OR age = 13 OR age = 15)
+AND (grade < 9)
+
+# "BETWEEN" is the keyword to evaluvate range between two values
