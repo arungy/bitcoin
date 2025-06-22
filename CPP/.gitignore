@@ -1,7 +1,0 @@
-*.exe
-*.o
-*.sdf
-Release/
-Debug/
-.vs/
-*.opensdf
